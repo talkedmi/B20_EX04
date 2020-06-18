@@ -6,7 +6,10 @@ namespace Ex04.Menus.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World2!");
+            interfaceTest interfaceTest = new interfaceTest();
+            DelegatesTest delegatesTest = new DelegatesTest();
+            interfaceTest.Show();
+            delegatesTest.Show();
         }
     }
 }

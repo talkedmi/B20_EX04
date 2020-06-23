@@ -12,7 +12,6 @@ namespace Ex04.Menus.Delegates
 
         public SubMenu(string i_Name) : base(i_Name)
         {
-
         }
 
         protected internal override void doWhenSelected()

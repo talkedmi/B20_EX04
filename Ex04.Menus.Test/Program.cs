@@ -2,9 +2,9 @@
 
 namespace Ex04.Menus.Test
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             interfaceTest interfaceTest = new interfaceTest();
             DelegatesTest delegatesTest = new DelegatesTest();

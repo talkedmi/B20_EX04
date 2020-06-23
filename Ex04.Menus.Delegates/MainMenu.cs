@@ -12,9 +12,9 @@ namespace Ex04.Menus.Delegates
         {
             Console.WriteLine("0. Exit");
         }
-        public MainMenu(String I_Name) : base(I_Name)
-        {
 
+        public MainMenu(string I_Name) : base(I_Name)
+        {
         }
     }
 }

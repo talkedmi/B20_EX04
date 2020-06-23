@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Delegates
 {
-    class ValueOutOfRangeException : Exception
+    public class ValueOutOfRangeException : Exception
     {
         private float m_MaxValue;
         private float m_MinValue;
@@ -17,7 +17,7 @@ namespace Ex04.Menus.Delegates
             m_MinValue = i_MinValue;
         }
 
-        public ValueOutOfRangeException(int i_MinValue, int I_MaxValue, String i_ExceptionMessage, Exception i_InnerException) :
+        public ValueOutOfRangeException(int i_MinValue, int I_MaxValue, string i_ExceptionMessage, Exception i_InnerException) :
             base(i_ExceptionMessage, i_InnerException)
         {
             m_MaxValue = I_MaxValue;

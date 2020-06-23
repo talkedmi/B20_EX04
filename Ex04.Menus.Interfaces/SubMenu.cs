@@ -10,12 +10,11 @@ namespace Ex04.Menus.Interfaces
 
         public SubMenu(string i_Name) : base(i_Name)
         {
-
         }
 
         protected internal override void doWhenSelected()
         {
-            Show();
+            this.Show();
         }
 
         public void Show()
@@ -24,11 +23,11 @@ namespace Ex04.Menus.Interfaces
             do
             {
                 Console.Clear();
-                printMenuOptions();
-                userInput = getMenuOption(r_MenuItems.Count);
+                this.printMenuOptions();
+                userInput = this.getMenuOption(this.r_MenuItems.Count);
                 if (userInput != 0)
                 {
-                    r_MenuItems[(int)userInput - 1].doWhenSelected();
+                    this.r_MenuItems[(int)userInput - 1].doWhenSelected();
                 }
             }
             while (userInput != 0);
@@ -41,14 +40,14 @@ namespace Ex04.Menus.Interfaces
  @"{0}
 
 Menu Options:",
- Name);
-            foreach(MenuItem menuItem in r_MenuItems)
+ this.Name);
+            foreach(MenuItem menuItem in this.r_MenuItems)
             {
                 Console.WriteLine("{0}. {1}", currentOption, menuItem);
                 currentOption++;
             }
 
-            printReturnLine();
+            this.printReturnLine();
         }
 
         protected virtual void printReturnLine()
@@ -65,7 +64,7 @@ Menu Options:",
                 {
                     Console.WriteLine("Please select an option from the menu: ");
                     string userInput = Console.ReadLine();
-                    selectedMenuOption = validateInput(userInput, i_MaxAvailableInput);
+                    selectedMenuOption = this.validateInput(userInput, i_MaxAvailableInput);
                     break;
                 }
                 catch (FormatException)
@@ -103,7 +102,7 @@ Menu Options:",
 
         public void AddMenuItem(MenuItem i_MenuItemToAdd)
         {
-            r_MenuItems.Add(i_MenuItemToAdd);
+            this.r_MenuItems.Add(i_MenuItemToAdd);
         }
     }
 }

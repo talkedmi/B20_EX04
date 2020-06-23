@@ -8,9 +8,9 @@ namespace Ex04.Menus.Interfaces
     {
         private string m_Name;
 
-        protected MenuItem (string i_Name)
+        protected MenuItem(string i_Name)
         {
-            m_Name = i_Name;
+            this.m_Name = i_Name;
         }
 
         protected string Name

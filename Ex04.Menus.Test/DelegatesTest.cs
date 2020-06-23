@@ -1,6 +1,6 @@
-﻿using Ex04.Menus.Delegates;
-using System;
+﻿using System;
 using System.Text;
+using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
@@ -19,10 +19,9 @@ namespace Ex04.Menus.Test
             {
                 this.m_MainMenu = value;
             }
-
         }
 
-        private void createMenu ()
+        private void createMenu()
         {
             MainMenu = new MainMenu("Delegates Test Menu");
             SubMenu showDateTime = new SubMenu("Show Date/Time");
@@ -41,7 +40,6 @@ namespace Ex04.Menus.Test
             showTime.Selected += new TimeView().showTime;
             countCapital.Selected += new CountCapitals().capitalsCounter;
             showVersion.Selected += new VersionShower().showVersion;
-
         }
 
         public void Show()

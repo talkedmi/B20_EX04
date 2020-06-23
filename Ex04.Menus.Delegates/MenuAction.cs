@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace Ex04.Menus.Delegates
 {
     public delegate void MenuOptionSelectedDelegate();
+
      public class MenuAction : MenuItem
-    {
+     {
         public event MenuOptionSelectedDelegate Selected;
 
         public MenuAction(string i_Name) : base(i_Name)
         {
-
         }
 
         protected internal override void doWhenSelected()

@@ -10,8 +10,7 @@ namespace Ex04.Menus.Interfaces
 
         public MenuAction(string i_Name, IMenuItemSelectedListener i_Listener) : base(i_Name)
         {
-
-            m_WhenSelectedHandler = i_Listener;
+            this.m_WhenSelectedHandler = i_Listener;
         }
 
         public IMenuItemSelectedListener MenuSelectedListener
@@ -23,23 +22,21 @@ namespace Ex04.Menus.Interfaces
 
             set
             {
-                m_WhenSelectedHandler = value;
+                this.m_WhenSelectedHandler = value;
             }
         }
 
         protected internal override void doWhenSelected()
         {
             Console.Clear();
-            notifySelectedListener();
+            this.notifySelectedListener();
             Console.WriteLine("Press ENTER to return to the menu");
             Console.ReadLine();
         }
 
         private void notifySelectedListener()
         {
-            m_WhenSelectedHandler.DoWhenSelected();
+            this.m_WhenSelectedHandler.DoWhenSelected();
         }
-
-
     }
 }
